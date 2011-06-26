@@ -184,6 +184,27 @@ function display_post_title( ) {
 }
 
 /**
+ * @since version 1.2.0
+ */
+function display_permalink( $title ) {
+	echo '<a href="';
+	the_permalink();
+	echo '" title="';
+	the_title();
+	echo ' | ';
+	bloginfo( 'name' );	
+	echo '">';
+	
+	if ( $title == true ) {
+		the_title();
+	} else {
+		_e( 'Permalink' );
+	}
+	echo '</a>';
+}
+
+
+/**
  * @todo Add microformats
  * @since version 1.0.0
  */
