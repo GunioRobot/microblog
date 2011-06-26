@@ -186,7 +186,7 @@ article > footer { border-top: 1px solid #ccc; font-size: smaller; }
 .article-top-nav-right { display: table-cell; width: 50%; margin-right: 10px; text-align: right; }
 
 .article-content-wrapper { display: table; width: 100%; padding: 10px 0;}
-	.article-meta { display: table-cell; vertical-align: top; width: 160px; padding-right: 10px; }
+	.article-meta { display: table-cell; vertical-align: top; width: 64px; padding-right: 20px; }
 	.article-content { display: table-cell; vertical-align: top; }
 
 .article-bottom-nav,

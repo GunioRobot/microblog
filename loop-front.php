@@ -5,12 +5,12 @@
 					</header><!-- END article-header -->
 					<div class="article-content-wrapper">
 						<aside class="article-meta">
-	
-							<?php if ( !is_page() ): ?>
-							<div class="post-date"><time datetime="<?php the_time( get_option( 'date_format' ) ); ?>, <?php the_time( get_option( 'time_format' ) ); ?>" pubdate><a href="<?php echo get_day_link( get_the_date( 'Y' ), get_the_date( 'm' ), get_the_date( 'd' )); ?>" title="<?php _e( 'Articles posted on ' ); the_time( get_option( 'date_format' ) ); ?> | <?php bloginfo( 'name' ); ?>"><div class="post-date-month"><?php the_time( 'F' ); ?></div><div class="post-date-day"><?php the_time( 'd' ); ?></div></a></time></div>
-							<?php endif; ?>
+						<?php 
+							echo get_avatar( get_the_author_meta( 'user_email' ), $size = '64', $default = '<path_to_url>' );
+						 ?>	
 						</aside><!-- END article-meta -->
 						<section class="article-content">
+							<p class="smaller"><?php display_author(); ?></p>
 							<?php the_content(); ?>
 						</section><!-- END article-content -->
 					</div><!-- END article-content-wrapper -->

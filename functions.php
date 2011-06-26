@@ -205,6 +205,27 @@ function display_permalink( $title ) {
 
 
 /**
+ * @since version 1.2.0
+ */
+function display_author() {
+
+	echo '<a href="';
+	bloginfo( 'url' );
+	echo '/author/'
+		. get_the_author_meta( 'nickname' );
+	echo '" title="'
+		. get_the_author_meta( 'nickname' )
+		. ' | ';
+	bloginfo( 'name' );
+	echo '">'
+	. get_the_author_meta( 'nickname' )
+	. '</a> ';
+
+	echo get_the_author_meta( 'display_name' );
+}
+
+
+/**
  * @todo Add microformats
  * @since version 1.0.0
  */
