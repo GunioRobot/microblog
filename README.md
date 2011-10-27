@@ -3,7 +3,7 @@ Microblog
 
 WordPress theme primarily designed for publishing short notifications.
 
-Currently at the “ Work in Progress ” stage.
+Currently at the “ Refactoring my old skin ” stage.
 
 
 Known Issues

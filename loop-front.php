@@ -34,7 +34,7 @@
 						<?php comments_popup_link(__( 'Comment on this article' ), __( '1 Comment' ), __( '% Comments' ) ); ?> <?php display_post_comments_rss_button(); ?> | 
 						<?php endif; ?>
 						
-						<?php display_permalink(); ?> | <a href="#" rel="nofollow" title="<?php _e( 'Back to the top of this page' ); ?> | <?php bloginfo( 'name' ); ?>">^ <?php _e( 'Top' ); ?></a></nav>
+						<?php display_permalink( '' ); ?> | <a href="#" rel="nofollow" title="<?php _e( 'Back to the top of this page' ); ?> | <?php bloginfo( 'name' ); ?>">^ <?php _e( 'Top' ); ?></a></nav>
 					</footer>
 				</article>
 			<?php if( is_single() || is_page ) { comments_template(); } ?>
