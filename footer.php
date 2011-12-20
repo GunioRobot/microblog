@@ -7,7 +7,7 @@
 					</ul>
 				<?php endif; ?>
 			</div>
-	
+
 			<div class="col-4-2">
 				<?php if ( is_active_sidebar( 'site-footer-col-2' ) ) : ?>
 					<ul>
@@ -15,7 +15,7 @@
 					</ul>
 				<?php endif; ?>
 			</div>
-	
+
 			<div class="col-4-3">
 				<?php if ( is_active_sidebar( 'site-footer-col-3' ) ) : ?>
 					<ul>
@@ -23,7 +23,7 @@
 					</ul>
 				<?php endif; ?>
 			</div>
-	
+
 			<div class="col-4-4">
 				<?php if ( is_active_sidebar( 'site-footer-col-4' ) ) : ?>
 					<ul>

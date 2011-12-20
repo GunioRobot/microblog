@@ -11,7 +11,7 @@ function initialize_template() {
 	 * Remove the generator meta tag for enhanced security
 	 */
 	remove_action( 'wp_head', 'wp_generator' );
-	
+
 	/**
 	 * Deregister the default jQuery for the front end
 	 * so it can be loaded directly from Goolgle
@@ -36,11 +36,11 @@ function initialize_template() {
 	 * Remove Really simple discovery link
 	 */
 	//remove_action( 'wp_head', 'rsd_link' );  /** Required by Delicious */
-	
+
 	/**
 	 * Remove Windows Live Writer link
 	 */
-	remove_action( 'wp_head', 'wlwmanifest_link' );  
+	remove_action( 'wp_head', 'wlwmanifest_link' );
 
 	/**
 	 * Remove default style packaged with the Recent Comments widget
@@ -53,7 +53,7 @@ function initialize_template() {
 	 * @see http://codex.wordpress.org/Function_Reference/the_post_thumbnail
 	 */
 	add_theme_support( 'post-thumbnails' );
-	
+
 	/**
 	 * Enable the Main navigation menu
 	 * @see http://codex.wordpress.org/Function_Reference/register_nav_menu
@@ -69,7 +69,7 @@ function initialize_template() {
 //include( dirname(__FILE__) . '/admin/admin_panel.php' );
 
 /**
- * @since version 1.0.0 
+ * @since version 1.0.0
  */
 function register_theme_sidebars() {
 
@@ -82,7 +82,7 @@ function register_theme_sidebars() {
 		'before_title' => '<h4 class="widget-title">',
 		'after_title' => '</h4>',
 	) );
-	
+
 	register_sidebar( array(
 		'name' => __( 'Site Footer Column 1' ),
 		'id' => 'site-footer-col-1',
@@ -92,7 +92,7 @@ function register_theme_sidebars() {
 		'before_title' => '<h4 class="widget-title">',
 		'after_title' => '</h4>',
 	) );
-	
+
 	register_sidebar( array(
 		'name' => __( 'Site Footer Column 2' ),
 		'id' => 'site-footer-col-2',
@@ -102,7 +102,7 @@ function register_theme_sidebars() {
 		'before_title' => '<h4 class="widget-title">',
 		'after_title' => '</h4>',
 	) );
-	
+
 	register_sidebar( array(
 		'name' => __( 'Site Footer Column 3' ),
 		'id' => 'site-footer-col-3',
@@ -112,7 +112,7 @@ function register_theme_sidebars() {
 		'before_title' => '<h4 class="widget-title">',
 		'after_title' => '</h4>',
 	) );
-	
+
 	register_sidebar( array(
 		'name' => __( 'Site Footer Column 4' ),
 		'id' => 'site-footer-col-4',
@@ -134,7 +134,7 @@ function register_theme_sidebars() {
  * @since version 1.0.0
  */
 function display_meta_title( ) {
-	
+
 	global $page, $paged;
 
 	wp_title( '|', true, 'right' );
@@ -156,14 +156,14 @@ function display_meta_title( ) {
  * @since version 1.0.0
  */
 function display_post_title( ) {
-	
+
 	if ( is_single() || is_page() ) {
 		echo '<h1><a href="';
 		the_permalink();
 		echo '" title="';
 		the_title();
 		echo ' | ';
-		bloginfo( 'name' );	
+		bloginfo( 'name' );
 		echo '">';
 		the_title();
 		echo '</a></h1>';
@@ -175,7 +175,7 @@ function display_post_title( ) {
 		echo '" title="';
 		the_title();
 		echo ' | ';
-		bloginfo( 'name' );	
+		bloginfo( 'name' );
 		echo '">';
 		the_title();
 		echo '</a></h2>';
@@ -192,9 +192,9 @@ function display_permalink( $title ) {
 	echo '" title="';
 	the_title();
 	echo ' | ';
-	bloginfo( 'name' );	
+	bloginfo( 'name' );
 	echo '">';
-	
+
 	if ( $title == true ) {
 		the_title();
 	} else {
@@ -231,14 +231,14 @@ function display_author() {
  */
 function display_scientific_reference() {
 	echo '<div class="reference">';
-	
+
 	/**
 	 * Author
 	 */
 	echo '<a href="';
-	
+
 	$author_url = get_the_author_meta( 'user_url' );
-	
+
 	if ( !empty( $author_url ) ) {
 		the_author_meta( 'user_url' );
 		echo '" title="'
@@ -254,7 +254,7 @@ function display_scientific_reference() {
 		bloginfo( 'name' );
 	}
 	echo '">';
-	
+
 	$last_name = get_the_author_meta( 'last_name' );
 	$first_name = get_the_author_meta( 'first_name' );
 
@@ -271,7 +271,7 @@ function display_scientific_reference() {
 			. '</span>';
 	}
 	echo '</a> ';
-	
+
 	echo '<time datetime="'
 		. get_the_date( 'Y' )
 		. '">('
@@ -293,7 +293,7 @@ function display_scientific_reference() {
 	echo '</a>';
 	_e( '&nbsp;”' );
 	echo ', ';
-	
+
 	_e( 'online' );
 	echo ', ';
 
@@ -333,7 +333,7 @@ function display_scientific_reference() {
 		. ', '
 		. get_the_time( get_option( 'time_format' ) )
 		. '" pubdate>';
-		
+
 	if ( is_page() ) {
 		the_date( 'Y-m-d' );
 	}
@@ -356,7 +356,7 @@ function display_scientific_reference() {
 	 */
 	 $pub_date = get_the_date( 'Y-m-d' );
 	 $mod_date = get_the_modified_date( 'Y-m-d' );
-	 
+
 	 if ( $pub_date != $mod_date ) {
 		_e( 'last modified on' );
 		echo ' <time datetime="'
@@ -375,11 +375,11 @@ function display_scientific_reference() {
 		. '">'
 		. date( 'Y-m-d' )
 		. '</time>';
-	
+
 	if ( !is_page() ) { echo ', '; comments_popup_link( 'no comments', '1 Comment', '% Comments' ); }
-	
+
 	echo '.</div><!-- END of scientific reference -->';
-	
+
 }
 
 /**
@@ -389,9 +389,9 @@ function display_scientific_reference() {
  * @since version 1.0.0
  */
 function get_first_post_year( ) {
-	
+
 	global $wpdb;
-	
+
 	$post_datetimes = $wpdb->get_row(
 		$wpdb->prepare( "SELECT YEAR(min(post_date_gmt)) AS firstyear, YEAR(max(post_date_gmt)) AS lastyear FROM $wpdb->posts WHERE post_date_gmt > 1970" )
 		);
@@ -414,7 +414,7 @@ function display_first_post_year( ) {
  * @since version 1.0.0
  */
 function display_copyright_date_span( ) {
-	
+
 	$first_year = get_first_post_year();
 	$current_year = date( 'Y' );
 
@@ -469,23 +469,23 @@ function display_post_comments_rss_button() {
  * @since version 1.0.0
  */
 function display_subpages() {
-	
+
 	global $post;
 
 	$root_ancestor_id = end( $post->ancestors );
 	$root_ancestor = get_post( $root_ancestor_id );
-	
+
 	if ( !$post->post_parent ) {
 		$children = wp_list_pages( "title_li=&child_of=" . $post->ID . "&echo=0" );
 	}
-	
+
 	else {
 		if( $post->ancestors ) {
 			$ancestors = end( $post->ancestors );
 			$children = wp_list_pages( "title_li=&child_of=" . $ancestors . "&echo=0" );
 		}
 	}
-	
+
 	if ( $children ) {
 		echo '<h4>'
 		. '<a href="'
@@ -512,10 +512,10 @@ function display_subpages() {
  */
 function display_pagination_nav( ) {
 
-	global $wp_rewrite;		
+	global $wp_rewrite;
 	global $wp_query;
 	$wp_query->query_vars[ 'paged' ] > 1 ? $current = $wp_query->query_vars[ 'paged' ] : $current = 1;
-	
+
 	$pagination = array(
 		'base'			=> @add_query_arg( 'page','%#%' ),
 		'format'			=> '',
@@ -531,16 +531,16 @@ function display_pagination_nav( ) {
 		'add_args'		=> false, // array of query args to add
 		'add_fragment' => ''
 	);
-	
+
 	if ( $wp_rewrite->using_permalinks() )
 		$pagination[ 'base' ] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link(1) ) )
 			. 'page/%#%/', 'paged' );
-	
+
 	if ( !empty( $wp_query->query_vars[ 's' ] ) )
 		$pagination[ 'add_args' ] = array( 's' => get_query_var( 's' ) );
-	
+
 	echo '<nav id="pagination">' . paginate_links( $pagination ) . "</nav>\n";
-		
+
 }
 
 /**
@@ -548,20 +548,20 @@ function display_pagination_nav( ) {
  * @see http://dimox.net/wordpress-breadcrumbs-without-a-plugin/
  */
 function display_breadcrumbs() {
-	
+
 	$delimiter = '&gt;';
 	$name = __( 'Home' ); /** Text for the Home link */
 	$currentBefore = '<span class="current">';
 	$currentAfter = '</span>';
- 
+
 	if ( !is_home() && !is_front_page() || is_paged() ) {
-	
+
 		echo '<nav id="breadcrumbs">';
-		
+
 		global $post;
 		$home = get_bloginfo( 'url' );
 		echo '<a href="' . $home . '">' . $name . '</a> ' . $delimiter . ' ';
-		
+
 		if ( is_category() ) {
 			global $wp_query;
 			$cat_obj = $wp_query->get_queried_object();
@@ -574,22 +574,22 @@ function display_breadcrumbs() {
 			single_cat_title( '', true );
 			echo $currentAfter;
 		}
-		
+
 		elseif ( is_day() ) {
 			echo '<a href="' . get_year_link( get_the_time( 'Y' ) ) . '">' . get_the_time( 'Y' ) . '</a> ' . $delimiter . ' ';
 			echo '<a href="' . get_month_link( get_the_time( 'Y' ), get_the_time( 'm' ) ) . '">' . get_the_time( 'F' ) . '</a> ' . $delimiter . ' ';
 			echo $currentBefore . get_the_time( 'd' ) . $currentAfter;
 		}
-		
+
 		elseif ( is_month() ) {
 			echo '<a href="' . get_year_link( get_the_time( 'Y' ) ) . '">' . get_the_time( 'Y' ) . '</a> ' . $delimiter . ' ';
 			echo $currentBefore . get_the_time( 'F' ) . $currentAfter;
 		}
-		
+
 		elseif ( is_year() ) {
 			echo $currentBefore . get_the_time( 'Y' ) . $currentAfter;
 		}
-		
+
 		elseif ( is_single() && !is_attachment() ) {
 			$cat = get_the_category();
 			$cat = $cat[0];
@@ -598,7 +598,7 @@ function display_breadcrumbs() {
 			the_title();
 			echo $currentAfter;
 		}
-		
+
 		elseif ( is_attachment() ) {
 			$parent = get_post( $post->post_parent );
 			$cat = get_the_category( $parent->ID );
@@ -609,13 +609,13 @@ function display_breadcrumbs() {
 			the_title();
 			echo $currentAfter;
 		}
-	
+
 		elseif ( is_page() && !$post->post_parent ) {
 			echo $currentBefore;
 			the_title();
 			echo $currentAfter;
 		}
-		
+
 		elseif ( is_page() && $post->post_parent ) {
 			$parent_id  = $post->post_parent;
 			$breadcrumbs = array();
@@ -632,7 +632,7 @@ function display_breadcrumbs() {
 			the_title();
 			echo $currentAfter;
 		}
-		
+
 		elseif ( is_search() ) {
 			echo $currentBefore
 			. __( 'Search results for' )
@@ -642,7 +642,7 @@ function display_breadcrumbs() {
 			. __( '&nbsp;”' )
 			. $currentAfter;
 		}
-		
+
 		elseif ( is_tag() ) {
 			echo $currentBefore
 			. __( 'Archives for the tag' )
@@ -652,7 +652,7 @@ function display_breadcrumbs() {
 			echo __( '&nbsp;”' )
 			. $currentAfter;
 		}
-		
+
 		elseif ( is_author() ) {
 			global $author;
 			$userdata = get_userdata( $author );
@@ -660,13 +660,13 @@ function display_breadcrumbs() {
 			. $userdata->display_name
 			. $currentAfter;
 		}
-		
+
 		elseif ( is_404() ) {
 			echo $currentBefore
 			. __( '404 Not found' )
 			. $currentAfter;
 		}
-		
+
 		if ( get_query_var( 'paged' ) ) {
 			echo ' ( '
 			. __( 'Page' )
@@ -674,17 +674,17 @@ function display_breadcrumbs() {
 			. get_query_var( 'paged' )
 			. ' )';
 		}
-		
+
 		echo "</nav>\n";
-		
+
 	}
 
 	else {
-?>  	
+?>
 <nav id="breadcrumbs">
 	<span class="current"><?php _e( 'Home' ); ?></span>
 </nav>
-<?php  	
+<?php
 	}
 }
 

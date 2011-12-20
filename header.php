@@ -23,7 +23,7 @@
 			<div id="top-nav-right" class="col-2-2-30"><?php get_search_form(); ?></div>
 		</nav>
 	</div><!-- END top-nav-wrapper -->
-	
+
 	<div id="site-header-wrapper">
 		<header id="site-header">
 			<hgroup>

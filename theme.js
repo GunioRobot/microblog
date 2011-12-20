@@ -216,7 +216,7 @@ function stylize_profilelink() {
 
 /**
  * Properly integrate the 'Authenticate with OpenID' checkbox into the comment form.
- * This will move the checkbox below the Website field, and add an AJAX hook to 
+ * This will move the checkbox below the Website field, and add an AJAX hook to
  * show/hide the checkbox depending on whether the given URL is a valid OpenID.
  */
 function add_openid_to_comment_form(wp_url, nonce) {
@@ -245,7 +245,7 @@ function add_openid_to_comment_form(wp_url, nonce) {
 			openid_checkbox.attr('checked', '');
 			openid_comment.slideUp();
 			return;
-		} 
+		}
 
 		jQuery.getJSON(wp_url + '?openid=ajax', {url: url.val(), _wpnonce: openid_nonce}, function(data, textStatus) {
 			url.removeClass('openid_loading');

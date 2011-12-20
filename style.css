@@ -8,10 +8,10 @@
  * Tags: html5 css3 fixed-width translation-ready
  * License: GNU General Public License v2.0
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
- * 
+ *
  * If you find this theme useful or interesting,
  * send me a tweet @_sthibault : )
- * 
+ *
  */
 @media all {
 
@@ -82,7 +82,7 @@ time {}
 	border-top: 1px solid #6092c2;
 	border-bottom: 1px solid #6092c2;
 }
-	
+
 	#site-header {
 		width: 800px;
 		margin: 0 auto;
@@ -153,7 +153,7 @@ time {}
 	border-top: 1px solid #6092c2;
 	border-bottom: 1px solid #6092c2;
 }
-	
+
 	#widgetized-footer {
 		width: 800px;
 		margin: 0 auto;
@@ -374,7 +374,7 @@ blockquote { background: #1863ab; border: 1px solid #0f4171; color: white; paddi
 
 	blockquote a, blockquote a:visited { color: white; text-decoration: underline; }
 	blockquote a:hover { color: #a8c1d9; }
-	
+
 cite { font-style: normal; }
 code { font-family: "Courier New", Courier, Monospace; padding-bottom: 10px; }
 pre {
@@ -445,7 +445,7 @@ pre {
  #searchform {}
  #searchsubmit {}
  .required { color: red; }
- 
+
 .widget-container { margin-bottom: 10px; padding: 0 5px; }
 .widget_tag_cloud {}
 .widget_calendar {}
@@ -576,7 +576,7 @@ form.commentform {}
 			-khtml-box-shadow: #111 0 0 20px;
 		}
 
-	
+
 	p.form-allowed-tags {}
 	p.form-submit { text-align: center; }
 	input#submit {
@@ -594,7 +594,7 @@ form.commentform {}
 		-moz-box-shadow: #666 0 0 3px;
 		-khtml-box-shadow: #666 0 0 3px;
 	}
-	
+
 	input#submit:hover {
 		box-shadow: #666 0 0 20px;
 		-webkit-box-shadow: #666 0 0 20px;
@@ -772,7 +772,7 @@ img.badge { height: 15px; width: 80px; }
 
 .drop-down-menu li ul {
 	display: none;
-	position: absolute; 
+	position: absolute;
 	z-index: 10;
 }
 
@@ -807,7 +807,7 @@ img.badge { height: 15px; width: 80px; }
 }
 
 .drop-down-menu li:hover ul li:hover a {
-	color: inherit;	
+	color: inherit;
 }
 
 /* Level 3 */
@@ -846,12 +846,12 @@ img.badge { height: 15px; width: 80px; }
 
 .drop-down-menu li:hover ul li:hover ul li:hover {
 	background: inherit;
-	color: inherit;	
+	color: inherit;
 	border: solid 1px transparent;
 }
 
 .drop-down-menu li:hover ul li:hover ul li:hover a {
-	color: inherit;	
+	color: inherit;
 }
 
 /**
@@ -894,7 +894,7 @@ nav#breadcrumbs { display: inline; padding-left: 5px; }
 	font-size: 10pt;
 	color: #6092c2;
 }
-	
+
 	#breadcrumbs > .current { color: #a8c1d9; }
 
 #searchform { padding: 0; }
@@ -997,8 +997,8 @@ blockquote a { text-decoration: underline; }
 #openid_enabled_link, .openid_link, #openid_identifier, #commentform #openid_identifier {
 	background-image: url( '.images/openid.gif' );
 	background-position: 3px 50%;
-	background-repeat: no-repeat; 
-	padding-left: 21px !important; 
+	background-repeat: no-repeat;
+	padding-left: 21px !important;
 }
 
 .openid_loading {
@@ -1023,7 +1023,7 @@ body.login #openid_identifier {
 }
 
 /* fix link color on wp-login.php */
-body.login form#loginform a.legacy, 
+body.login form#loginform a.legacy,
 body.login form#registerform a.legacy {
 	color: #FFF;
 }

@@ -5,9 +5,9 @@
 					</header><!-- END article-header -->
 					<div class="article-content-wrapper">
 						<aside class="article-meta">
-						<?php 
+						<?php
 							echo get_avatar( get_the_author_meta( 'user_email' ), $size = '64', $default = '<path_to_url>' );
-						 ?>	
+						 ?>
 						</aside><!-- END article-meta -->
 						<section class="article-content">
 							<p class="smaller"><?php display_author(); ?></p>
@@ -17,7 +17,7 @@
 					<footer class="article-footer">
 						<nav class="article-bottom-nav">
 						<?php
-						
+
 							echo '<a href="'
 								. get_day_link( get_the_date( 'Y' ), get_the_date( 'm' ), get_the_date( 'd' ))
 								. '" title="'
@@ -31,9 +31,9 @@
 						?>
 
 						<?php if ( comments_open() || have_comments() ): ?>
-						<?php comments_popup_link(__( 'Comment on this article' ), __( '1 Comment' ), __( '% Comments' ) ); ?> <?php display_post_comments_rss_button(); ?> | 
+						<?php comments_popup_link(__( 'Comment on this article' ), __( '1 Comment' ), __( '% Comments' ) ); ?> <?php display_post_comments_rss_button(); ?> |
 						<?php endif; ?>
-						
+
 						<?php display_permalink( '' ); ?> | <a href="#" rel="nofollow" title="<?php _e( 'Back to the top of this page' ); ?> | <?php bloginfo( 'name' ); ?>">^ <?php _e( 'Top' ); ?></a></nav>
 					</footer>
 				</article>

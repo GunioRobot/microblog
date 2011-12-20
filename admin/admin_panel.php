@@ -28,7 +28,7 @@ function mb_create_menu() {
 	 * @param capability		The capability required for this menu to be displayed to the user.
 	 * @param menu_slug	The slug name to refer to this menu by (should be unique for this menu)
 	 * @param function		The function to be called to output the content for this page.
-	*/	
+	*/
 	add_menu_page(
 		'Microblog Settings', /* page_title */
 		'Microblog', /* menu_title */
@@ -64,7 +64,7 @@ function mb_settings_page() {
 <div class="wrap">
 	<?php screen_icon( 'options-general' ); ?>
 	<h2><?php _e( 'Microblog' ) ?></h2>
-	
+
 	<form method="post" action="options.php">
 	    <?php settings_fields( 'mb-settings-group' ); ?>
 	    <table class="form-table">
@@ -72,22 +72,22 @@ function mb_settings_page() {
 	        	<th scope="row">New Option Name</th>
 	        	<td><input type="text" name="new_option_name" value="<?php echo get_option( 'new_option_name' ); ?>" /></td>
 	        </tr>
-	         
+
 	        <tr valign="top">
 	        	<th scope="row">Some Other Option</th>
 	        	<td><input type="text" name="some_other_option" value="<?php echo get_option( 'some_other_option' ); ?>" /></td>
 	        </tr>
-	        
+
 	        <tr valign="top">
 	        	<th scope="row">Options, Etc.</th>
 	        	<td><input type="text" name="option_etc" value="<?php echo get_option( 'option_etc' ); ?>" /></td>
 	        </tr>
 	    </table>
-	    
+
 	    <p class="submit">
 	    	<input type="submit" class="button-primary" value="<?php _e( 'Save Changes' ) ?>" />
 	    </p>
-	
+
 	</form>
 </div>
 <?php

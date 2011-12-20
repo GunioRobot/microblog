@@ -5,22 +5,22 @@
 					</header><!-- END article-header -->
 					<div class="article-content-wrapper">
 						<aside class="article-meta">
-	
+
 							<?php if ( !is_page() ): ?>
 							<div class="post-date"><time datetime="<?php the_time( get_option( 'date_format' ) ); ?>, <?php the_time( get_option( 'time_format' ) ); ?>" pubdate><a href="<?php echo get_day_link( get_the_date( 'Y' ), get_the_date( 'm' ), get_the_date( 'd' )); ?>" title="<?php _e( 'Articles posted on ' ); the_time( get_option( 'date_format' ) ); ?> | <?php bloginfo( 'name' ); ?>"><div class="post-date-month"><?php the_time( 'F' ); ?></div><div class="post-date-day"><?php the_time( 'd' ); ?></div></a></time></div>
 							<?php endif; ?>
-							
+
 							<?php if ( comments_open() || have_comments() ): ?>
 							<p><?php comments_popup_link(__( 'Comment on this article' ), __( '1 Comment' ), __( '% Comments' ) ); ?> <?php display_post_comments_rss_button(); ?></p>
 							<?php endif; ?>
-							
+
 							<?php
 								/**
 								 * Count the number of categories
 								 * and output singular or plural string accordingly
 								 */
 								$count = count( get_the_category( ) );
-								
+
 								if ( $count != 0 ) {
 									echo '<p class="smaller">';
 									if ( $count == 1 ) { _e( 'Category' ); }
@@ -30,19 +30,19 @@
 									echo "</p>\n";
 								}
 							?>
-								
-							<?php	
+
+							<?php
 								/**
 								 * Count the number of keywords
 								 * and output singular or plural string accordingly
 								 */
 								$count = count( get_the_tags( ) );
-	
+
 								/**
 								 * If there are no keywords
 								 */
 								if ( get_the_tags() == false ) { }
-								
+
 								/**
 								 * If there is one keyword
 								 */
@@ -53,7 +53,7 @@
 									the_tags( '' );
 									echo "</p>\n";
 								}
-								
+
 								/**
 								 * If there is more than one keyword
 								 */
@@ -65,14 +65,14 @@
 									echo "</p>\n";
 								}
 							?>
-	
+
 							<?php
 								/**
 								 * If the user can edit posts, display the Edit link
 								 */
 								if ( current_user_can( 'edit_posts' ) ) { echo '<p class="smaller">'; edit_post_link(__( 'Edit' )); echo "</p>\n"; }
 							?>
-							
+
 						</aside><!-- END article-meta -->
 						<section class="article-content">
 							<?php the_content(); ?>
